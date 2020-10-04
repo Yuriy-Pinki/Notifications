@@ -14,3 +14,8 @@
 * python manage.py migrate   >> OK
 * Adding git file and db.sqlite3 to the .gitignore
 * deliting some spaces
+
+* set en_US language in settings.py
+* add Task to ammin panel
+* editing notification/views.py
+* adding index.html 
