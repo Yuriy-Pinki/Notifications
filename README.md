@@ -1,16 +1,36 @@
+#### Common
+* Adding git file and db.sqlite3 to the *.gitignore* `Notification`
+* Run `python manage.py makemigrations notifications`
+* Run `python manage.py migrate`
+* add `Task` model to the admin panel
+* deleting git file
+***
+#### models.py
 * Adding the class named `Notification`
-* Adding params `models.ForeignKey` into the `Notification`
-`INSTALLED_APPS = [
-'notifications.apps.NotificationsConfig',`
-
-* Editing ENUM according to Django Documentation
-* Run python manage.py makemigrations notifications
-	log
-	`Migrations for 'notifications':
-  alerts\apps\notifications\migrations\0001_initial.py
-    - Create model Task
-    - Create model Notification`
-
-* python manage.py migrate   >> OK
-* Adding git file and db.sqlite3 to the .gitignore
-* deliting some spaces
+* Adding params `models.ForeignKey` into the `Notification` in models.py
+* Editing ENUM according to the Django Documentation
+* deleting some spaces in *notifications/models.py*
+* rewriting *notifications/models.py* only in English
+* editing the magic method
+```
+    def __str__(self):
+        return self.title
+```
+***
+#### views.py
+* adding to *notification/views.py* `index` view function
+* adding `index`  view (show tasklist)
+* adding `detail` view with `try\except` construction (show details of something task)
+***
+#### settings.py 
+* set `en_US` language in *settings.py*
+* Adding `Notifications` app *settings.py*
+```
+INSTALLED_APPS = [
+'notifications.apps.NotificationsConfig',]
+```
+****
+#### HTML templates
+* adding *index.html*
+move *alerts/templates/notifications/index.html* to *alerts/apps/notifications/templates/notifications/*
+* adding `detail.html`. It shows details of particular task

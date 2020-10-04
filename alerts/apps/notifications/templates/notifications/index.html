@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+
+<body>
+{% if task_list %}
+    <ul>
+    {% for task in task_list %}
+        <li><a href="/notifications/{{ task.id }}/">{{ task.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Not available at this moment.</p>
+{% endif %}
+</body>
+</html>
