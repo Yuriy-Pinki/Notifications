@@ -5,6 +5,7 @@
 * Run `python manage.py makemigrations notifications`
 * Run `python manage.py migrate`
 * add `Task` field to the admin panel
+* deleting git file
 ***
 #### models.py
 * Editing ENUM according to the Django Documentation
