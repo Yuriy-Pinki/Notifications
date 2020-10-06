@@ -11,13 +11,20 @@
 * Editing ENUM according to the Django Documentation
 * deleting some spaces in *notifications/models.py*
 * rewriting *notifications/models.py* only in English
+* editing the magic method
+```
+    def __str__(self):
+        return self.title (~~return self.task_title~~)
+```
 ***
 #### views.py
 * adding to *notification/views.py* `index` view function
+* adding `index`  view (show tasklist)
+* adding `detail` view with `try\except` construction (show details of something task)
 ***
 #### settings.py 
 * set `en_US` language in *settings.py*
-* Adding our app *settings.py*
+* Adding `Notifications` app *settings.py*
 ```
 INSTALLED_APPS = [
 'notifications.apps.NotificationsConfig',]
@@ -26,3 +33,4 @@ INSTALLED_APPS = [
 #### HTML templates
 * adding *index.html*
 move *alerts/templates/notifications/index.html* to *alerts/apps/notifications/templates/notifications/*
+* adding `detail.html`. It shows details of particular task

@@ -9,7 +9,7 @@ class Task(models.Model):
 
     
     def __str__(self):
-        return self.task_title
+        return self.title
 
 class Notification(models.Model):
     class NotificationUrgency(models.TextChoices):
