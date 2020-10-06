@@ -14,7 +14,7 @@
 * editing the magic method
 ```
     def __str__(self):
-        return self.title (~~return self.task_title~~)
+        return self.title
 ```
 ***
 #### views.py
