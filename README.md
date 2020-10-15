@@ -21,6 +21,7 @@
 * adding to *notification/views.py* `index` view function
 * adding `index`  view (show tasklist)
 * adding `detail` view with `try\except` construction (show details of something task)
+* adding `add_notification` view
 ***
 #### settings.py 
 * set `en_US` language in *settings.py*
@@ -34,3 +35,4 @@ INSTALLED_APPS = [
 * adding *index.html*
 move *alerts/templates/notifications/index.html* to *alerts/apps/notifications/templates/notifications/*
 * adding `detail.html`. It shows details of particular task
+* adding `html form` for creating new task 
