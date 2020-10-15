@@ -6,10 +6,37 @@
 </head>
 
 <body>
+	<h1>Add you task here</h1>
+	<form action="{% url 'notifications:add_task' %}" method="POST">
+		{% csrf_token %}
+		<label for="text">Title: </label>
+		<input type="text" placeholder="Task title" name="task_title" ><br><br>
+		<label for="select_urgency">Urgency:</label>
+		<select name="select_urgency">
+			<option>minor</option>
+			<option>major</option>
+			<option>critical</option>
+			</select><br><br>
+
+		<label for="date">Notification date: </label>
+		<input type="date" id="date" name="date"/><br><br>
+
+		<label for="time">Time: </label>
+        <input type="time" name="time"/><br><br>
+
+		<textarea name="task_description" placeholder="Task description" cols="30" rows ="5"></textarea><br>
+		<button type="submit">Send</button>
+	</form>
+
+<h3>Task list</h3>
+
 {% if task_list %}
     <ul>
-    {% for task in task_list %}
-        <li><a href="/notifications/{{ task.id }}/">{{ task.title }}</a></li>
+    {% for a in task_list %}
+<!--    <li><a href="/notifications/{{ task.id }}/">{{ task.title }}</a></li> -->
+        <li>
+        	<a href="{% url 'notifications:detail' a.id %}">{{ a.title }} </a>
+        </li>
     {% endfor %}
     </ul>
 {% else %}

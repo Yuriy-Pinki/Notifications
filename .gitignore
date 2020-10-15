@@ -48,3 +48,4 @@ coverage.xml
 *.pot
 git
 *.sqlite3
+forms.py
