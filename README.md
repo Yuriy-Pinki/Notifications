@@ -4,6 +4,7 @@
 * Run `python manage.py migrate`
 * add `Task` model to the admin panel
 * deleting git file
+* adding `Notification` model to the admin panel
 ***
 #### models.py
 * Adding the class named `Notification`

@@ -18,5 +18,7 @@ def detail(request, task_id):
 
 def add_notification(request, task_id):
 	a = Task.objects.get(id = task_id)
-	a.notification_set.create(notification_datetime=request.POST['time'], urgency=request.POST['select_urgency'])
+	a.create(title=request.POST['task_title'], description=request.POST['task_descriprion'])
 	return HttpResponseRedirect(reverse('notifications.detail', args=(a.id, )))
+
+ # notification_datetime=request.POST['time']

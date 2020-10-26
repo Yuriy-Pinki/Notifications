@@ -23,3 +23,6 @@ class Notification(models.Model):
         choices = NotificationUrgency.choices, 
         default = NotificationUrgency.MINOR, )
 
+    def __str__(self):
+        return self.notification_datetime
+

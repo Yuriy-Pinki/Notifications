@@ -9,13 +9,13 @@
 	<h3>Adding new task </h3>
 	<form action="{% url 'notifications.add_notification' task.id}" method="POST">
 		{% csrf_token %}
-		<input type="text" placeholder="Task title" name="name" ><br>
-		<select name="select_urgency" rows="20">
+		<input type="text" placeholder="Task title" name="task_title" ><br>
+		<select name="select_urgency">
 			<option>minor</option>
 			<option>major</option>
 			<option>critical</option>
 			</select><br>
-		<textarea name="text" placeholder="Task description" cols="30" rows ="5"></textarea><br>
+		<textarea name="task_descriprion" placeholder="Task description" cols="30" rows ="5"></textarea><br>
 		<button type="submit">Send</button>
 
 	</form>
