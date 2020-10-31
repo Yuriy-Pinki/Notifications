@@ -6,5 +6,5 @@ app_name = 'notifications'
 urlpatterns = [
     path('', views.index, name='index'),
     path('<int:task_id>/', views.detail, name='detail'),
-    path('<int:task_id>/add_notification/', views.add_notification, name='add_notification'),
+    path('add_task/', views.add_task, name='add_task'),
     ]

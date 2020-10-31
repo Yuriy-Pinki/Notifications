@@ -1,10 +1,13 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.utils import timezone
+
+tz = timezone.get_default_timezone()
 
 class Task(models.Model):
 
-    title = models.CharField('task title', max_length=100)
-    description = models.TextField('text description of title')
+    title = models.CharField('Task title', max_length=100)
+    description = models.TextField('Description of title')
     create_datetime = models.DateTimeField('creating date and time')
 
     
@@ -18,11 +21,7 @@ class Notification(models.Model):
         CRITICAL = 'Critical', _('Critical')
 
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
-    notification_datetime = models.DateTimeField('notification date and time ')
+    notification_datetime = models.DateTimeField('notification date and time')
     urgency = models.CharField(max_length=20, 
         choices = NotificationUrgency.choices, 
         default = NotificationUrgency.MINOR, )
-
-    def __str__(self):
-        return self.notification_datetime
-

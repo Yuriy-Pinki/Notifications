@@ -6,18 +6,15 @@
 </head>
 
 <body>
+	
 <h1>{{task.title}}</h1>
 <p>{{task.description}}</p>
 <p>{{task.create_datetime}}</p>
+<h3>All Notifications</h3>
 <ul>
 {% for notify in task.notification_set.all %}
 <li>{{ notify.notification_datetime }}, {{ notify.urgency }}</li>
 {% endfor %}
-</ul>
-    <ul>
-    {% for task in task_list %}
-        <li><a href="{% url 'notifications:detail' task.id %}">{{ task.title }}</a></li>
-    {% endfor %}
-    </ul>
+
 </body>
 </html>
