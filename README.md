@@ -5,7 +5,6 @@
 * add `Task` model to the admin panel
 * deleting git file
 * adding `Notification` model to the admin panel
-* 
 ***
 #### models.py
 * Adding the class named `Notification`
@@ -43,4 +42,4 @@ move *alerts/templates/notifications/index.html* to *alerts/apps/notifications/t
 * adding `html form` for creating new task
 * editing `html form` to correct show
 * some visual changes in `detail.html`
-* adding `etit.html` page template
+* adding `edit.html` page template
