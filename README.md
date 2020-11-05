@@ -5,7 +5,6 @@
 * add `Task` model to the admin panel
 * deleting git file
 * adding `Notification` model to the admin panel
-* 
 ***
 #### models.py
 * Adding the class named `Notification`
@@ -25,6 +24,8 @@
 * adding `detail` view with `try\except` construction (show details of something task)
 * adding `add_task` view
 * adding creating task and notifications to him
+* editing `detail` views with using `get_object_or_404`
+* adding `edit_task` and `delete_task` function
 ***
 #### settings.py 
 * set `en_US` language in *settings.py*
@@ -41,3 +42,4 @@ move *alerts/templates/notifications/index.html* to *alerts/apps/notifications/t
 * adding `html form` for creating new task
 * editing `html form` to correct show
 * some visual changes in `detail.html`
+* adding `edit.html` page template

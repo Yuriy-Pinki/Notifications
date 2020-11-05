@@ -2,8 +2,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 
-tz = timezone.get_default_timezone()
-
 class Task(models.Model):
 
     title = models.CharField('Task title', max_length=100)
