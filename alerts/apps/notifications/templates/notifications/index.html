@@ -1,30 +1,35 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title></title>
-</head>
+<title>Notify Me!</title>
 
-<body>
+{% block content %}
+
 	<h1>Add you task here</h1>
 	<form action="{% url 'notifications:add_task' %}" method="POST">
 		{% csrf_token %}
-		<label for="text">Title: </label>
-		<input type="text" placeholder="Task title" name="task_title" ><br><br>
-		<label for="select_urgency">Urgency:</label>
-		<select name="select_urgency">
-			<option>minor</option>
-			<option>major</option>
-			<option>critical</option>
-			</select><br><br>
-
-		<label for="date">Notification date: </label>
-		<input type="date" id="date" name="date"/><br><br>
-
-		<label for="time">Time: </label>
-        <input type="time" name="time"/><br><br>
-
-		<textarea name="task_description" placeholder="Task description" cols="30" rows ="5"></textarea><br>
+		<p>
+			<label for="text">Title: </label><br>
+			<input type="text" placeholder="Task title" name="task_title" >
+		</p>
+		<p>
+			<label for="select_urgency">Urgency:</label>
+			<select name="select_urgency">
+				<option>minor</option>
+				<option>major</option>
+				<option>critical</option>
+			</select>
+		</p>
+		<p>
+			<label for="date">Notification date: </label>
+			<input type="date" id="date" name="date"/>
+		</p>
+		
+		<p>
+			<label for="time">Time: </label>
+        	<input type="time" name="time"/>
+		</p>
+		<p>
+			<label>Description: </label><br>
+			<textarea name="task_description" placeholder="Task description" cols="30" rows ="5"></textarea><br>
+		</p>
 		<button type="submit">Send</button>
 	</form>
 
@@ -42,5 +47,5 @@
 {% else %}
     <p>Not available at this moment.</p>
 {% endif %}
-</body>
-</html>
+
+{% endblock %}

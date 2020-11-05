@@ -1,0 +1,1 @@
+start D:\Projects\Notify\notify\Scripts\activate.bat

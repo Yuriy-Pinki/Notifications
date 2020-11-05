@@ -1,20 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title></title>
-</head>
+{% extends 'base.html' %}
 
-<body>
+{% block content %}
 	
 <h1>{{task.title}}</h1>
 <p>{{task.description}}</p>
 <p>{{task.create_datetime}}</p>
+
+<p>
+	<a href="{% url 'notifications:edit_task' task.id %}">Edit</a> | <a href="{% url 'notifications:delete_task' task.id %}">Delete</a>
+</p>
+
 <h3>All Notifications</h3>
 <ul>
 {% for notify in task.notification_set.all %}
 <li>{{ notify.notification_datetime }}, {{ notify.urgency }}</li>
 {% endfor %}
 
-</body>
-</html>
+{% endblock %}
